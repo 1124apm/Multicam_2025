@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>index Page</h1>
+    <!-- 유저가 데이터를 입력하는 폼을 생성 -->
+    <form action="/second" method="get">
+        <!--
+            form 태그의 action 속성: 어디로 데이터를 보낼 것인가
+            method 속성: 데이터를 어떠한 방식으로 보낼 것인가
+        -->
+        <!--
+            유저와 서버가 데이터를 주고받을 때의 데이터 타입 = dict 이므로 key가 입력되는 부분 필요
+            유저가 실제 입력한 데이터는 dict에서 value에 해당
+            key에 해당하는 속성은 name
+
+            type: 실제 데이터의 타입, name: 파이썬에서 변수명 정하듯이!
+        -->
+        <input type="text" name='input_text'><br>
+        <input type="password" name="input_pass"><br>
+        <!-- 입력된 데이터를 제출하는 버튼 생성 -->
+        <input type="submit">
+    </form>
+    <h3>post 방식으로 데이터를 보내는 폼</h3>
+    <form action="/third" method="post">
+        <input type="text" name='input_text'><br>
+        <input type="password" name="input_pass"><br>
+        <!-- 입력된 데이터를 제출하는 버튼 생성 -->
+        <input type="submit">
+    </form>
+</body>
+</html>
+
+<!-- ? 앞은 주소, 뒤는 데이터 -->
+<!-- app.py에 아래처럼 되어있기 때문에 크롬 주소창에 http://127.0.0.1:5000/ 입력해서 결과 확인
+    @app.route('/')
+    def index():
+    return render_template('index.html')
+-->
