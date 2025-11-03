@@ -1,0 +1,377 @@
+#
+# There is insufficient memory for the Java Runtime Environment to continue.
+# Native memory allocation (mmap) failed to map 134217728 bytes for G1 virtual space
+# Possible reasons:
+#   The system is out of physical RAM or swap space
+#   The process is running with CompressedOops enabled, and the Java Heap may be blocking the growth of the native heap
+# Possible solutions:
+#   Reduce memory load on the system
+#   Increase physical memory or swap space
+#   Check if swap backing store is full
+#   Decrease Java heap size (-Xmx/-Xms)
+#   Decrease number of Java threads
+#   Decrease Java thread stack sizes (-Xss)
+#   Set larger code cache with -XX:ReservedCodeCacheSize=
+#   JVM is running with Unscaled Compressed Oops mode in which the Java heap is
+#     placed in the first 4GB address space. The Java Heap base address is the
+#     maximum limit for the native heap growth. Please use -XX:HeapBaseMinAddress
+#     to set the Java Heap base and to place the Java Heap above 4GB virtual address.
+# This output file may be truncated or incomplete.
+#
+#  Out of Memory Error (os_windows.cpp:3603), pid=9376, tid=1968
+#
+# JRE version:  (21.0.8+12) (build )
+# Java VM: Java HotSpot(TM) 64-Bit Server VM (21.0.8+12-LTS-250, mixed mode, sharing, tiered, compressed oops, compressed class ptrs, g1 gc, windows-amd64)
+# No core dump will be written. Minidumps are not enabled by default on client versions of Windows
+#
+
+---------------  S U M M A R Y ------------
+
+Command Line: -Dfile.encoding=UTF8 -ea -Xmx1024m 
+
+Host: Intel(R) Core(TM) i7-6700 CPU @ 3.40GHz, 8 cores, 7G,  Windows 11 , 64 bit Build 22621 (10.0.22621.5415)
+Time: Fri Oct 31 15:32:08 2025 대한민국 표준시 elapsed time: 0.051359 seconds (0d 0h 0m 0s)
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x00000256dcaadb80):  JavaThread "Unknown thread" [_thread_in_vm, id=1968, stack(0x000000afbfc00000,0x000000afbfee0000) (2944K)]
+
+Stack: [0x000000afbfc00000,0x000000afbfee0000]
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+C  0x00007ffaad67c179
+C  0x00007ffaad8084c1
+C  0x00007ffaad80a9ee
+C  0x00007ffaad80b0c3
+C  0x00007ffaad22ebf6
+C  0x00007ffaad6788f5
+C  0x00007ffaad66d45a
+C  0x00007ffaad304b1a
+C  0x00007ffaad30c796
+C  0x00007ffaad35f85e
+C  0x00007ffaad35fb08
+C  0x00007ffaad2d8e2c
+C  0x00007ffaad2d998b
+C  0x00007ffaad7d1879
+C  0x00007ffaad36c541
+C  0x00007ffaad7baaf8
+C  0x00007ffaad40172e
+C  0x00007ffaad403321
+C  0x00007ffac70f1b91
+C  0x00007ffac7121fc1
+C  [python313.dll+0xbc612]
+C  [python313.dll+0x2c8d1]
+C  [python313.dll+0x2c229]
+C  [python313.dll+0x312f4]
+C  [python313.dll+0x2cf87]
+C  [python313.dll+0xc1b30]
+C  [python313.dll+0x2c635]
+C  [python313.dll+0x2c229]
+C  [python313.dll+0x312f4]
+C  [python313.dll+0xe5538]
+C  [python313.dll+0xe53ee]
+C  [python313.dll+0x12bcdf]
+C  [python313.dll+0x12bb1e]
+C  [python313.dll+0x334e6]
+C  [python313.dll+0x79429]
+C  [python313.dll+0x792e3]
+C  [python313.dll+0x33956]
+C  [python313.dll+0x2cf87]
+C  [python313.dll+0x90dce]
+C  [python313.dll+0x905c7]
+C  [python313.dll+0x904bb]
+C  [python313.dll+0x33edc]
+C  [python313.dll+0x79429]
+C  [python313.dll+0x26e778]
+C  [python313.dll+0x264e0d]
+C  [_asyncio.pyd+0x6fe7]
+C  [_asyncio.pyd+0x6956]
+C  [_asyncio.pyd+0x7292]
+C  [python313.dll+0x6016f]
+C  [python313.dll+0x29d649]
+C  [python313.dll+0x29d954]
+C  [python313.dll+0x248f3]
+C  [python313.dll+0x90571]
+C  [python313.dll+0x904bb]
+C  [python313.dll+0x33edc]
+C  [python313.dll+0xe5538]
+C  [python313.dll+0xe53ee]
+C  [python313.dll+0x12bcdf]
+C  [python313.dll+0x12bb1e]
+C  [python313.dll+0x2c8b5]
+C  [python313.dll+0x2c229]
+C  [python313.dll+0x312f4]
+C  [python313.dll+0x2cf87]
+C  [python313.dll+0x90571]
+C  [python313.dll+0x904bb]
+C  [python313.dll+0x12dc14]
+C  [python313.dll+0x12e083]
+C  [python313.dll+0x12f8b8]
+C  [python313.dll+0x12f913]
+C  [python.exe+0x1230]
+C  [KERNEL32.DLL+0x1259d]
+C  [ntdll.dll+0x5af78]
+
+
+---------------  P R O C E S S  ---------------
+
+Threads class SMR info:
+_java_thread_list=0x00007ffaadb7fc48, length=0, elements={
+}
+
+Java Threads: ( => current thread )
+Total: 0
+
+Other Threads:
+  0x00000256dcd69910 WorkerThread "GC Thread#0"                     [id=5592, stack(0x000000afc59a0000,0x000000afc5c80000) (2944K)]
+  0x00000256dca8cc40 ConcurrentGCThread "G1 Main Marker"            [id=15144, stack(0x000000afc5c80000,0x000000afc5f60000) (2944K)]
+  0x00000256dcd62ff0 WorkerThread "G1 Conc#0"                       [id=5544, stack(0x000000afc5f60000,0x000000afc6240000) (2944K)]
+
+[error occurred during error reporting (printing all threads), id 0xc0000005, EXCEPTION_ACCESS_VIOLATION (0xc0000005) at pc=0x00007ffaad2eb5b7]
+VM state: not at safepoint (not fully initialized)
+
+VM Mutex/Monitor currently owned by a thread:  ([mutex/lock_event])
+[0x00007ffaadbf0f50] Heap_lock - owner thread: 0x00000256dcaadb80
+
+Heap address: 0x00000000c0000000, size: 1024 MB, Compressed Oops mode: 32-bit
+
+CDS archive(s) mapped at: [0x0000000000000000-0x0000000000000000-0x0000000000000000), size 0, SharedBaseAddress: 0x0000000800000000, ArchiveRelocationMode: 1.
+Narrow klass base: 0x0000000000000000, Narrow klass shift: 0, Narrow klass range: 0x0
+
+GC Precious Log:
+ CardTable entry size: 512
+ Card Set container configuration: InlinePtr #cards 5 size 8 Array Of Cards #cards 12 size 40 Howl #buckets 4 coarsen threshold 1843 Howl Bitmap #cards 512 size 80 coarsen threshold 460 Card regions per heap region 1 cards per card region 2048
+
+Heap:
+ garbage-first heap   total 0K, used 0K [0x00000000c0000000, 0x0000000100000000)
+  region size 1024K, 0 young (0K), 0 survivors (0K)
+
+[error occurred during error reporting (printing heap information), id 0xc0000005, EXCEPTION_ACCESS_VIOLATION (0xc0000005) at pc=0x00007ffaad6d51e9]
+GC Heap History (0 events):
+No events
+
+Dll operation events (1 events):
+Event: 0.030 Loaded shared library C:\Program Files\Java\jdk-21\bin\java.dll
+
+Deoptimization events (0 events):
+No events
+
+Classes loaded (0 events):
+No events
+
+Classes unloaded (0 events):
+No events
+
+Classes redefined (0 events):
+No events
+
+Internal exceptions (0 events):
+No events
+
+ZGC Phase Switch (0 events):
+No events
+
+VM Operations (0 events):
+No events
+
+Events (0 events):
+No events
+
+
+Dynamic libraries:
+0x00007ff771010000 - 0x00007ff77102a000 	c:\Users\student\AppData\Local\Programs\Python\Python313\python.exe
+0x00007ffb15970000 - 0x00007ffb15b87000 	C:\WINDOWS\SYSTEM32\ntdll.dll
+0x00007ffb14dd0000 - 0x00007ffb14e94000 	C:\WINDOWS\System32\KERNEL32.DLL
+0x00007ffb12a60000 - 0x00007ffb12e32000 	C:\WINDOWS\System32\KERNELBASE.dll
+0x00007ffb13430000 - 0x00007ffb13541000 	C:\WINDOWS\System32\ucrtbase.dll
+0x00007ffae8df0000 - 0x00007ffae8e0e000 	c:\Users\student\AppData\Local\Programs\Python\Python313\VCRUNTIME140.dll
+0x00007ffab4c10000 - 0x00007ffab5265000 	c:\Users\student\AppData\Local\Programs\Python\Python313\python313.dll
+0x00007ffb14f80000 - 0x00007ffb14ff1000 	C:\WINDOWS\System32\WS2_32.dll
+0x00007ffb156a0000 - 0x00007ffb157b4000 	C:\WINDOWS\System32\RPCRT4.dll
+0x00007ffb135d0000 - 0x00007ffb135f8000 	C:\WINDOWS\System32\bcrypt.dll
+0x00007ffb155d0000 - 0x00007ffb15681000 	C:\WINDOWS\System32\ADVAPI32.dll
+0x00007ffb15120000 - 0x00007ffb151c7000 	C:\WINDOWS\System32\msvcrt.dll
+0x00007ffb0f720000 - 0x00007ffb0f72a000 	C:\WINDOWS\SYSTEM32\VERSION.dll
+0x00007ffb14970000 - 0x00007ffb14a18000 	C:\WINDOWS\System32\sechost.dll
+0x00007ffb12fb0000 - 0x00007ffb1302b000 	C:\WINDOWS\System32\bcryptprimitives.dll
+0x00000256b7130000 - 0x00000256b7140000 	c:\Users\student\AppData\Local\Programs\Python\Python313\python3.DLL
+0x00007ffaf10f0000 - 0x00007ffaf10fb000 	c:\Users\student\AppData\Local\Programs\Python\Python313\DLLs\_wmi.pyd
+0x00007ffb14ea0000 - 0x00007ffb14f77000 	C:\WINDOWS\System32\OLEAUT32.dll
+0x00007ffb13360000 - 0x00007ffb133fa000 	C:\WINDOWS\System32\msvcp_win.dll
+0x00007ffb13600000 - 0x00007ffb13993000 	C:\WINDOWS\System32\combase.dll
+0x00007ffb0d270000 - 0x00007ffb0d379000 	C:\WINDOWS\SYSTEM32\PROPSYS.dll
+0x00007ffaeec80000 - 0x00007ffaeec8c000 	c:\Users\student\AppData\Local\Programs\Python\Python313\VCRUNTIME140_1.dll
+0x00007ffac6ca0000 - 0x00007ffac6d9a000 	C:\Users\student\AppData\Roaming\Python\Python313\site-packages\zmq\backend\cython\_zmq.pyd
+0x00007ffb11510000 - 0x00007ffb1153d000 	C:\WINDOWS\SYSTEM32\IPHLPAPI.DLL
+0x00007ffb12180000 - 0x00007ffb1218c000 	C:\WINDOWS\SYSTEM32\CRYPTBASE.DLL
+0x00007ffadf180000 - 0x00007ffadf196000 	c:\Users\student\AppData\Local\Programs\Python\Python313\DLLs\_socket.pyd
+0x00007ffaeb440000 - 0x00007ffaeb449000 	c:\Users\student\AppData\Local\Programs\Python\Python313\DLLs\select.pyd
+0x00007ffadd530000 - 0x00007ffadd55d000 	c:\Users\student\AppData\Local\Programs\Python\Python313\DLLs\_ssl.pyd
+0x00007ffb12e40000 - 0x00007ffb12fa7000 	C:\WINDOWS\System32\CRYPT32.dll
+0x00007ffab0eb0000 - 0x00007ffab13b3000 	c:\Users\student\AppData\Local\Programs\Python\Python313\DLLs\libcrypto-3.dll
+0x00007ffacfd80000 - 0x00007ffacfe43000 	c:\Users\student\AppData\Local\Programs\Python\Python313\DLLs\libssl-3.dll
+0x00007ffb14c10000 - 0x00007ffb14dc1000 	C:\WINDOWS\System32\USER32.dll
+0x00007ffb13400000 - 0x00007ffb13426000 	C:\WINDOWS\System32\win32u.dll
+0x00007ffb157f0000 - 0x00007ffb15819000 	C:\WINDOWS\System32\GDI32.dll
+0x00007ffb130f0000 - 0x00007ffb13213000 	C:\WINDOWS\System32\gdi32full.dll
+0x00007ffb15220000 - 0x00007ffb15251000 	C:\WINDOWS\System32\IMM32.DLL
+0x00007ffadf160000 - 0x00007ffadf172000 	c:\Users\student\AppData\Local\Programs\Python\Python313\DLLs\_asyncio.pyd
+0x00007ffae9a70000 - 0x00007ffae9a7e000 	c:\Users\student\AppData\Local\Programs\Python\Python313\DLLs\_overlapped.pyd
+0x00007ffb11f10000 - 0x00007ffb11f79000 	C:\WINDOWS\system32\mswsock.dll
+0x00007ffad42d0000 - 0x00007ffad42e6000 	c:\Users\student\AppData\Local\Programs\Python\Python313\DLLs\_bz2.pyd
+0x00007ffad1500000 - 0x00007ffad1527000 	c:\Users\student\AppData\Local\Programs\Python\Python313\DLLs\_lzma.pyd
+0x00007ffafdfd0000 - 0x00007ffafdfd9000 	c:\Users\student\AppData\Local\Programs\Python\Python313\DLLs\_queue.pyd
+0x00007ffad41e0000 - 0x00007ffad41f2000 	c:\Users\student\AppData\Local\Programs\Python\Python313\DLLs\_hashlib.pyd
+0x00007ffae8d10000 - 0x00007ffae8d18000 	C:\Users\student\AppData\Roaming\Python\Python313\site-packages\tornado\speedups.pyd
+0x00007ffadef70000 - 0x00007ffadef92000 	c:\Users\student\AppData\Local\Programs\Python\Python313\DLLs\_ctypes.pyd
+0x00007ffb15260000 - 0x00007ffb15400000 	C:\WINDOWS\System32\ole32.dll
+0x00007ffaea540000 - 0x00007ffaea54b000 	c:\Users\student\AppData\Local\Programs\Python\Python313\DLLs\libffi-8.dll
+0x00007ffad1fb0000 - 0x00007ffad1ff6000 	c:\Users\student\AppData\Local\Programs\Python\Python313\DLLs\_decimal.pyd
+0x00007ffae7580000 - 0x00007ffae7588000 	c:\Users\student\AppData\Local\Programs\Python\Python313\DLLs\_uuid.pyd
+0x00007ffb140c0000 - 0x00007ffb14962000 	C:\WINDOWS\System32\shell32.DLL
+0x00007ffb13220000 - 0x00007ffb1335f000 	C:\WINDOWS\System32\wintypes.dll
+0x00007ffad1f90000 - 0x00007ffad1fb0000 	c:\Users\student\AppData\Local\Programs\Python\Python313\DLLs\_sqlite3.pyd
+0x00007ffab7ac0000 - 0x00007ffab7c43000 	c:\Users\student\AppData\Local\Programs\Python\Python313\DLLs\sqlite3.dll
+0x00007ffad1790000 - 0x00007ffad17c3000 	c:\Users\student\AppData\Local\Programs\Python\Python313\DLLs\pyexpat.pyd
+0x00007ffad2000000 - 0x00007ffad20af000 	c:\Users\student\AppData\Local\Programs\Python\Python313\DLLs\unicodedata.pyd
+0x00007ffb11a90000 - 0x00007ffb11aa8000 	C:\WINDOWS\SYSTEM32\kernel.appcore.dll
+0x00007ffb100a0000 - 0x00007ffb10154000 	C:\WINDOWS\system32\uxtheme.dll
+0x00007ffb15000000 - 0x00007ffb150b0000 	C:\WINDOWS\System32\clbcatq.dll
+0x00007ffafd1f0000 - 0x00007ffafd20d000 	C:\WINDOWS\SYSTEM32\amsi.dll
+0x00007ffb12000000 - 0x00007ffb12028000 	C:\WINDOWS\SYSTEM32\USERENV.dll
+0x00007ffb12990000 - 0x00007ffb129bb000 	C:\WINDOWS\SYSTEM32\profapi.dll
+0x00007ffafd070000 - 0x00007ffafd112000 	C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.25090.3009-0\MpOav.dll
+0x00007ffaf51a0000 - 0x00007ffaf5238000 	C:\Program Files\AhnLab\V3IS90\AMSI\AMSI0001\v3amsi64.dll
+0x00007ffad1210000 - 0x00007ffad1224000 	C:\Users\student\AppData\Roaming\Python\Python313\site-packages\psutil\_psutil_windows.pyd
+0x00007ffb157c0000 - 0x00007ffb157c8000 	C:\WINDOWS\System32\PSAPI.DLL
+0x00007ffafc440000 - 0x00007ffafc490000 	C:\WINDOWS\SYSTEM32\pdh.dll
+0x00007ffb124e0000 - 0x00007ffb1252d000 	C:\WINDOWS\SYSTEM32\POWRPROF.dll
+0x00007ffb123d0000 - 0x00007ffb123e3000 	C:\WINDOWS\SYSTEM32\UMPDC.dll
+0x00007ffb11840000 - 0x00007ffb11854000 	C:\WINDOWS\SYSTEM32\wtsapi32.dll
+0x00007ffb139a0000 - 0x00007ffb139a9000 	C:\WINDOWS\System32\NSI.dll
+0x00007ffb0db20000 - 0x00007ffb0db39000 	C:\WINDOWS\SYSTEM32\dhcpcsvc6.DLL
+0x00007ffb0d5e0000 - 0x00007ffb0d5ff000 	C:\WINDOWS\SYSTEM32\dhcpcsvc.DLL
+0x00007ffb11580000 - 0x00007ffb11678000 	C:\WINDOWS\SYSTEM32\DNSAPI.dll
+0x00007ffad0910000 - 0x00007ffad0976000 	C:\Users\student\AppData\Roaming\Python\Python313\site-packages\debugpy\_vendored\pydevd\_pydevd_bundle\pydevd_cython.cp313-win_amd64.pyd
+0x00007ffad1160000 - 0x00007ffad11ba000 	C:\Users\student\AppData\Roaming\Python\Python313\site-packages\debugpy\_vendored\pydevd\_pydevd_sys_monitoring\_pydevd_sys_monitoring_cython.cp313-win_amd64.pyd
+0x00007ffb14a80000 - 0x00007ffb14b8c000 	C:\WINDOWS\System32\shcore.dll
+0x00007ffafdfa0000 - 0x00007ffafdfab000 	c:\Users\student\AppData\Local\Programs\Python\Python313\Lib\site-packages\sklearn\__check_build\_check_build.cp313-win_amd64.pyd
+0x00007ffafcdd0000 - 0x00007ffafce00000 	c:\Users\student\AppData\Local\Programs\Python\Python313\Lib\site-packages\sklearn\.libs\vcomp140.dll
+0x00007ffad2fd0000 - 0x00007ffad3059000 	c:\Users\student\AppData\Local\Programs\Python\Python313\Lib\site-packages\sklearn\.libs\msvcp140.dll
+0x00007ffacc100000 - 0x00007ffacc56e000 	c:\Users\student\AppData\Local\Programs\Python\Python313\Lib\site-packages\numpy\_core\_multiarray_umath.cp313-win_amd64.pyd
+0x00007ffac5140000 - 0x00007ffac64be000 	c:\Users\student\AppData\Local\Programs\Python\Python313\Lib\site-packages\numpy.libs\libscipy_openblas64_-860d95b1c38e637ce4509f5fa24fbf2a.dll
+0x00007ffaffde0000 - 0x00007ffaffe6d000 	c:\Users\student\AppData\Local\Programs\Python\Python313\Lib\site-packages\numpy.libs\msvcp140-a4c2229bdc2a2a630acdc095b4d86008.dll
+0x00007ffb027d0000 - 0x00007ffb027ee000 	c:\Users\student\AppData\Local\Programs\Python\Python313\Lib\site-packages\numpy\linalg\_umath_linalg.cp313-win_amd64.pyd
+0x00007ffb00050000 - 0x00007ffb00072000 	c:\Users\student\AppData\Local\Programs\Python\Python313\Lib\site-packages\scipy\_lib\_ccallback_c.cp313-win_amd64.pyd
+0x00007ffb02810000 - 0x00007ffb02817000 	c:\Users\student\AppData\Local\Programs\Python\Python313\Lib\site-packages\charset_normalizer\md.cp313-win_amd64.pyd
+0x00007ffafaeb0000 - 0x00007ffafaed5000 	c:\Users\student\AppData\Local\Programs\Python\Python313\Lib\site-packages\charset_normalizer\md__mypyc.cp313-win_amd64.pyd
+0x00007ffafd7d0000 - 0x00007ffafd809000 	c:\Users\student\AppData\Local\Programs\Python\Python313\Lib\site-packages\numpy\random\_bounded_integers.cp313-win_amd64.pyd
+0x00007ffb00020000 - 0x00007ffb0004d000 	c:\Users\student\AppData\Local\Programs\Python\Python313\Lib\site-packages\numpy\random\bit_generator.cp313-win_amd64.pyd
+0x00007ffafd6a0000 - 0x00007ffafd6cc000 	c:\Users\student\AppData\Local\Programs\Python\Python313\Lib\site-packages\numpy\random\_common.cp313-win_amd64.pyd
+0x00007ffafd4e0000 - 0x00007ffafd595000 	c:\Users\student\AppData\Local\Programs\Python\Python313\Lib\site-packages\numpy\random\_generator.cp313-win_amd64.pyd
+0x00007ffb00120000 - 0x00007ffb0013b000 	c:\Users\student\AppData\Local\Programs\Python\Python313\Lib\site-packages\numpy\random\_pcg64.cp313-win_amd64.pyd
+0x00007ffafd680000 - 0x00007ffafd699000 	c:\Users\student\AppData\Local\Programs\Python\Python313\Lib\site-packages\numpy\random\_mt19937.cp313-win_amd64.pyd
+0x00007ffafafa0000 - 0x00007ffafafb8000 	c:\Users\student\AppData\Local\Programs\Python\Python313\Lib\site-packages\numpy\random\_philox.cp313-win_amd64.pyd
+0x00007ffafaf80000 - 0x00007ffafaf93000 	c:\Users\student\AppData\Local\Programs\Python\Python313\Lib\site-packages\numpy\random\_sfc64.cp313-win_amd64.pyd
+0x00007ffafaee0000 - 0x00007ffafaf79000 	c:\Users\student\AppData\Local\Programs\Python\Python313\Lib\site-packages\numpy\random\mtrand.cp313-win_amd64.pyd
+0x00007ffad12d0000 - 0x00007ffad1317000 	c:\Users\student\AppData\Local\Programs\Python\Python313\Lib\site-packages\numpy\fft\_pocketfft_umath.cp313-win_amd64.pyd
+0x00007ffacbd00000 - 0x00007ffacc0f3000 	c:\Users\student\AppData\Local\Programs\Python\Python313\Lib\site-packages\scipy\sparse\_sparsetools.cp313-win_amd64.pyd
+0x00007ffacd9b0000 - 0x00007ffacda39000 	c:\Users\student\AppData\Local\Programs\Python\Python313\Lib\site-packages\scipy\sparse\_csparsetools.cp313-win_amd64.pyd
+0x00007ffafae30000 - 0x00007ffafae64000 	c:\Users\student\AppData\Local\Programs\Python\Python313\Lib\site-packages\scipy\_cyutility.cp313-win_amd64.pyd
+0x00007ffafd670000 - 0x00007ffafd67a000 	c:\Users\student\AppData\Local\Programs\Python\Python313\DLLs\_multiprocessing.pyd
+0x00007ffaca380000 - 0x00007ffaca4f7000 	c:\Users\student\AppData\Local\Programs\Python\Python313\Lib\site-packages\scipy\special\_ufuncs.cp313-win_amd64.pyd
+0x00007ffac3de0000 - 0x00007ffac513d000 	c:\Users\student\AppData\Local\Programs\Python\Python313\Lib\site-packages\scipy.libs\libscipy_openblas-48c358d105077551cc9cc3ba79387ed5.dll
+0x00007ffac9040000 - 0x00007ffac9282000 	c:\Users\student\AppData\Local\Programs\Python\Python313\Lib\site-packages\scipy\special\_ufuncs_cxx.cp313-win_amd64.pyd
+0x00007ffad15f0000 - 0x00007ffad1619000 	c:\Users\student\AppData\Local\Programs\Python\Python313\Lib\site-packages\scipy\special\_ellip_harm_2.cp313-win_amd64.pyd
+0x00007ffac8e00000 - 0x00007ffac9035000 	c:\Users\student\AppData\Local\Programs\Python\Python313\Lib\site-packages\scipy\special\_special_ufuncs.cp313-win_amd64.pyd
+0x00007ffac8c80000 - 0x00007ffac8df8000 	c:\Users\student\AppData\Local\Programs\Python\Python313\Lib\site-packages\scipy\special\_gufuncs.cp313-win_amd64.pyd
+0x00007ffacfec0000 - 0x00007ffacff10000 	c:\Users\student\AppData\Local\Programs\Python\Python313\Lib\site-packages\scipy\special\_specfun.cp313-win_amd64.pyd
+0x00007ffae7df0000 - 0x00007ffae7e04000 	c:\Users\student\AppData\Local\Programs\Python\Python313\Lib\site-packages\scipy\special\_comb.cp313-win_amd64.pyd
+0x00007ffacd540000 - 0x00007ffacd5fb000 	c:\Users\student\AppData\Local\Programs\Python\Python313\Lib\site-packages\scipy\linalg\_fblas.cp313-win_amd64.pyd
+0x00007ffacbac0000 - 0x00007ffacbcf1000 	c:\Users\student\AppData\Local\Programs\Python\Python313\Lib\site-packages\scipy\linalg\_flapack.cp313-win_amd64.pyd
+0x00007ffad10f0000 - 0x00007ffad1160000 	c:\Users\student\AppData\Local\Programs\Python\Python313\Lib\site-packages\scipy\linalg\_cythonized_array_utils.cp313-win_amd64.pyd
+0x00007ffacd920000 - 0x00007ffacd9a7000 	c:\Users\student\AppData\Local\Programs\Python\Python313\Lib\site-packages\scipy\linalg\cython_lapack.cp313-win_amd64.pyd
+0x00007ffae8e20000 - 0x00007ffae8e4d000 	c:\Users\student\AppData\Local\Programs\Python\Python313\Lib\site-packages\scipy\linalg\_solve_toeplitz.cp313-win_amd64.pyd
+0x00007ffae7e50000 - 0x00007ffae7e77000 	c:\Users\student\AppData\Local\Programs\Python\Python313\Lib\site-packages\scipy\linalg\_decomp_lu_cython.cp313-win_amd64.pyd
+0x00007ffad1650000 - 0x00007ffad168b000 	c:\Users\student\AppData\Local\Programs\Python\Python313\Lib\site-packages\scipy\linalg\_matfuncs_schur_sqrtm.cp313-win_amd64.pyd
+0x00007ffad11c0000 - 0x00007ffad1201000 	c:\Users\student\AppData\Local\Programs\Python\Python313\Lib\site-packages\scipy\linalg\_matfuncs_expm.cp313-win_amd64.pyd
+0x00007ffacb9b0000 - 0x00007ffacbaba000 	c:\Users\student\AppData\Local\Programs\Python\Python313\Lib\site-packages\scipy\linalg\_linalg_pythran.cp313-win_amd64.pyd
+0x00007ffad0aa0000 - 0x00007ffad0af4000 	c:\Users\student\AppData\Local\Programs\Python\Python313\Lib\site-packages\scipy\linalg\_decomp_update.cp313-win_amd64.pyd
+0x00007ffae5a40000 - 0x00007ffae5a6e000 	c:\Users\student\AppData\Local\Programs\Python\Python313\Lib\site-packages\scipy\linalg\cython_blas.cp313-win_amd64.pyd
+0x00007ffacb8b0000 - 0x00007ffacb93c000 	c:\Users\student\AppData\Local\Programs\Python\Python313\Lib\site-packages\scipy\sparse\linalg\_dsolve\_superlu.cp313-win_amd64.pyd
+0x00007ffac87f0000 - 0x00007ffac88db000 	c:\Users\student\AppData\Local\Programs\Python\Python313\Lib\site-packages\scipy\sparse\linalg\_eigen\arpack\_arpack.cp313-win_amd64.pyd
+0x00007ffac9710000 - 0x00007ffac97a5000 	c:\Users\student\AppData\Local\Programs\Python\Python313\Lib\site-packages\scipy\sparse\linalg\_propack\_spropack.cp313-win_amd64.pyd
+0x00007ffac89b0000 - 0x00007ffac8a44000 	c:\Users\student\AppData\Local\Programs\Python\Python313\Lib\site-packages\scipy\sparse\linalg\_propack\_dpropack.cp313-win_amd64.pyd
+0x00007ffac8730000 - 0x00007ffac87e7000 	c:\Users\student\AppData\Local\Programs\Python\Python313\Lib\site-packages\scipy\sparse\linalg\_propack\_cpropack.cp313-win_amd64.pyd
+0x00007ffac8660000 - 0x00007ffac8730000 	c:\Users\student\AppData\Local\Programs\Python\Python313\Lib\site-packages\scipy\sparse\linalg\_propack\_zpropack.cp313-win_amd64.pyd
+0x00007ffacd1d0000 - 0x00007ffacd358000 	c:\Users\student\AppData\Local\Programs\Python\Python313\Lib\site-packages\scipy\spatial\_ckdtree.cp313-win_amd64.pyd
+0x00007ffaccbc0000 - 0x00007ffaccca3000 	c:\Users\student\AppData\Local\Programs\Python\Python313\Lib\site-packages\scipy\spatial\_qhull.cp313-win_amd64.pyd
+0x00007ffaea100000 - 0x00007ffaea117000 	c:\Users\student\AppData\Local\Programs\Python\Python313\Lib\site-packages\scipy\_lib\messagestream.cp313-win_amd64.pyd
+
+dbghelp: loaded successfully - version: 4.0.5 - missing functions: none
+symbol engine: initialized successfully - sym options: 0x614 - pdb path: .;c:\Users\student\AppData\Local\Programs\Python\Python313;C:\WINDOWS\SYSTEM32;c:\Users\student\AppData\Local\Programs\Python\Python313\DLLs;C:\Users\student\AppData\Roaming\Python\Python313\site-packages\zmq\backend\cython;C:\Users\student\AppData\Roaming\Python\Python313\site-packages\tornado;C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.25090.3009-0;C:\Program Files\AhnLab\V3IS90\AMSI\AMSI0001;C:\Users\student\AppData\Roaming\Python\Python313\site-packages\psutil;C:\Users\student\AppData\Roaming\Python\Python313\site-packages\debugpy\_vendored\pydevd\_pydevd_bundle;C:\Users\student\AppData\Roaming\Python\Python313\site-packages\debugpy\_vendored\pydevd\_pydevd_sys_monitoring;c:\Users\student\AppData\Local\Programs\Python\Python313\Lib\site-packages\sklearn\__check_build;c:\Users\student\AppData\Local\Programs\Python\Python313\Lib\site-packages\sklearn\.libs;c:\Users\student\AppData\Local\Programs\Python\Python313\Lib\site-packages\numpy\_core;c:\Users\student\AppData\Local\Programs\Python\Python313\Lib\site-packages\numpy.libs;c:\Users\student\AppData\Local\Programs\Python\Python313\Lib\site-packages\numpy\linalg;c:\Users\student\AppData\Local\Programs\Python\Python313\Lib\site-packages\scipy\_lib;c:\Users\student\AppData\Local\Programs\Python\Python313\Lib\site-packages\charset_normalizer;c:\Users\student\AppData\Local\Programs\Python\Python313\Lib\site-packages\numpy\random;c:\Users\student\AppData\Local\Programs\Python\Python313\Lib\site-packages\numpy\fft;c:\Users\student\AppData\Local\Programs\Python\Python313\Lib\site-packages\scipy\sparse;c:\Users\student\AppData\Local\Programs\Python\Python313\Lib\site-packages\scipy;c:\Users\student\AppData\Local\Programs\Python\Python313\Lib\site-packages\scipy\special;c:\Users\student\AppData\Local\Programs\Python\Python313\Lib\site-packages\scipy.libs;c:\Users\student\AppData\Local\Programs\Python\Python313\Lib\site-packages\scipy\linalg;c:\Users\student\AppData\Local\Programs\Python\Python313\Lib\site-packages\scipy\sparse\linalg\_dsolve;c:\Users\student\AppData\Local\Programs\Python\Python313\Lib\site-packages\scipy\sparse\linalg\_eigen\arpack;c:\Users\student\AppData\Local\Programs\Python\Python313\Lib\site-packages\scipy\sparse\linalg\_propack;c:\Users\student\AppData\Local\Programs\Python\Python313\Lib\site-packages\scipy\spatial;c:\Users\student\AppData\Local\Programs\Python\Python313\Lib\site-packages\scipy\spatial\transform;c:\Users\student\AppData\Local\Programs\Python\Python313\Lib\site-packages\scipy\optimize;c:\Users\student\AppData\Local\Programs\Python\Python313\Lib\site-packages\scipy\optimize\_trlib;c:\Users\student\AppData\Local\Programs\Python\Python313\Lib\site-packages\scipy\optimize\_lsq;c:\Users\student\AppData\Local\Programs\Python\Python313\Lib\site-packages\scipy\optimize\_highspy;c:\Users\student\AppData\Local\Programs\Python\Python313\Lib\site-packages\scipy\_lib\_uarray;c:\Users\student\AppData\Local\Programs\Python\Python313\Lib\site-packages\scipy\fft\_pocketfft;c:\Users\student\AppData\Local\Programs\Python\Python313\Lib\site-packages\scipy\integrate;c:\Users\student\AppData\Local\Programs\Python\Python313\Lib\site-packages\scipy\interpolate;c:\Users\student\AppData\Local\Programs\Python\Python313\Lib\site-packages\scipy\stats;c:\Users\student\AppData\Local\Programs\Python\Python313\Lib\site-packages\scipy\stats\_levy_stable;c:\Users\student\AppData\Local\Programs\Python\Python313\Lib\site-packages\scipy\sparse\csgraph;c:\Users\student\AppData\Local\Programs\Python\Python313\Lib\site-packages\scipy\stats\_rcont;c:\Users\student\AppData\Local\Programs\Python\Python313\Lib\site-packages\scipy\ndimage;c:\Users\student\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\_libs;c:\Users\student\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\_libs\tslibs;c:\Users\student\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\_libs\window;c:\Users\student\AppData\Local\Programs\Python\Python313\Lib\site-packages\sklearn\utils;c:\Users\student\AppData\Local\Programs\Python\Python313\Lib\site-packages\sklearn;c:\Users\student\AppData\Local\Programs\Python\Python313\Lib\site-packages\sklearn\preprocessing;c:\Users\student\AppData\Local\Programs\Python\Python313\Lib\site-packages\sklearn\metrics\cluster;c:\Users\student\AppData\Local\Programs\Python\Python313\Lib\site-packages\sklearn\metrics;c:\Users\student\AppData\Local\Programs\Python\Python313\Lib\site-packages\sklearn\metrics\_pairwise_distances_reduction;c:\Users\student\AppData\Local\Programs\Python\Python313\Lib\site-packages\sklearn\linear_model;c:\Users\student\AppData\Local\Programs\Python\Python313\Lib\site-packages\sklearn\_loss;c:\Users\student\AppData\Local\Programs\Python\Python313\Lib\site-packages\sklearn\svm;c:\Users\student\AppData\Local\Programs\Python\Python313\Lib\site-packages\wrapt;c:\Users\student\AppData\Local\Programs\Python\Python313\Lib\site-packages\gensim;c:\Users\student\AppData\Local\Programs\Python\Python313\Lib\site-packages\gensim\corpora;c:\Users\student\AppData\Local\Programs\Python\Python313\Lib\site-packages\gensim\models;c:\Users\student\AppData\Local\Programs\Python\Python313\Lib\site-packages\gensim\similarities;c:\Users\student\AppData\Local\Programs\Python\Python313\Lib\site-packages;C:\Program Files\Java\jdk-21\bin\server;C:\Program Files\Java\jdk-21\bin
+
+VM Arguments:
+jvm_args: -Dfile.encoding=UTF8 -ea -Xmx1024m 
+java_command: <unknown>
+java_class_path (initial): C:\Users\student\AppData\Local\Programs\Python\Python313\Lib\site-packages\konlpy\java;C:\Users\student\AppData\Local\Programs\Python\Python313\Lib\site-packages\konlpy\java\bin;C:\Users\student\AppData\Local\Programs\Python\Python313\Lib\site-packages\konlpy\java\aho-corasick.jar;C:\Users\student\AppData\Local\Programs\Python\Python313\Lib\site-packages\konlpy\java\jhannanum-0.8.4.jar;C:\Users\student\AppData\Local\Programs\Python\Python313\Lib\site-packages\konlpy\java\kkma-2.0.jar;C:\Users\student\AppData\Local\Programs\Python\Python313\Lib\site-packages\konlpy\java\komoran-3.0.jar;C:\Users\student\AppData\Local\Programs\Python\Python313\Lib\site-packages\konlpy\java\open-korean-text-2.1.0.jar;C:\Users\student\AppData\Local\Programs\Python\Python313\Lib\site-packages\konlpy\java\scala-library-2.12.3.jar;C:\Users\student\AppData\Local\Programs\Python\Python313\Lib\site-packages\konlpy\java\shineware-common-1.0.jar;C:\Users\student\AppData\Local\Programs\Python\Python313\Lib\site-packages\konlpy\java\shineware-ds-1.0.jar;C:\Users\student\AppData\Local\Programs\Python\Python313\Lib\site-packages\konlpy\java\snakeyaml-1.12.jar;C:\Users\student\AppData\Local\Programs\Python\Python313\Lib\site-packages\konlpy\java\twitter-text-1.14.7.jar;C:\Users\student\AppData\Local\Programs\Python\Python313\Lib\site-packages\konlpy\java\jhannanum-0.8.4.jar;C:\Users\student\AppData\Local\Programs\Python\Python313\Lib\site-packages\konlpy\java\kkma-2.0.jar;C:\Users\student\AppData\Local\Programs\Python\Python313\Lib\site-packages\konlpy\java\aho-corasick.jar;C:\Users\student\AppData\Local\Programs\Python\Python313\Lib\site-packages\konlpy\java\shineware-common-1.0.jar;C:\Users\student\AppData\Local\Programs\Python\Python313\Lib\site-packages\konlpy\java\shineware-ds-1.0.jar;C:\Users\student\AppData\Local\Programs\Python\Python313\Lib\site-packages\konlpy\java\komoran-3.0.jar;C:\Users\student\AppData\Local\Programs\Python\Python313\Lib\site-packages\konlpy\java\snakeyaml-1.12.jar;C:\Users\student\AppData\Local\Programs\Python\Python313\Lib\site-packages\konlpy\java\scala-library-2.12.3.jar;C:\Users\student\AppData\Local\Programs\Python\Python313\Lib\site-packages\konlpy\java\open-korean-text-2.1.0.jar;C:\Users\student\AppData\Local\Programs\Python\Python313\Lib\site-packages\konlpy\java\twitter-text-1.14.7.jar;C:\Users\student\AppData\Local\Programs\Python\Python313\Lib\site-packages\konlpy\java\aho-corasick.jar;C:\Users\student\AppData\Local\Programs\Python\Python313\Lib\site-packages\konlpy\java\jhannanum-0.8.4.jar;C:\Users\student\AppData\Local\Programs\Python\Python313\Lib\site-packages\konlpy\java\kkma-2.0.jar;C:\Users\student\AppData\Local\Programs\Python\Python313\Lib\site-packages\konlpy\java\komoran-3.0.jar;C:\Users\student\AppData\Local\Programs\Python\Python313\Lib\site-packages\konlpy\java\open-korean-text-2.1.0.jar;C:\Users\student\AppData\Local\Programs\Python\Python313\Lib\site-packages\konlpy\java\scala-library-2.12.3.jar;C:\Users\student\AppData\Local\Programs\Python\Python313\Lib\site-packages\konlpy\java\shineware-common-1.0.jar;C:\Users\student\AppData\Local\Programs\Python\Python313\Lib\site-packages\konlpy\java\shineware-ds-1.0.jar;C:\Users\student\AppData\Local\Programs\Python\Python313\Lib\site-packages\konlpy\java\snakeyaml-1.12.jar;C:\Users\student\AppData\Local\Programs\Python\Python313\Lib\site-packages\konlpy\java\twitter-text-1.14.7.jar;c:\Users\student\AppData\Local\Programs\Python\Python313\Lib\site-packages\org.jpype.jar
+Launcher Type: generic
+
+[Global flags]
+     intx CICompilerCount                          = 4                                         {product} {ergonomic}
+     uint ConcGCThreads                            = 2                                         {product} {ergonomic}
+     uint G1ConcRefinementThreads                  = 8                                         {product} {ergonomic}
+   size_t G1HeapRegionSize                         = 1048576                                   {product} {ergonomic}
+    uintx GCDrainStackTargetSize                   = 64                                        {product} {ergonomic}
+   size_t InitialHeapSize                          = 134217728                                 {product} {ergonomic}
+   size_t MarkStackSize                            = 4194304                                   {product} {ergonomic}
+   size_t MaxHeapSize                              = 1073741824                                {product} {command line}
+   size_t MinHeapDeltaBytes                        = 1048576                                   {product} {ergonomic}
+   size_t MinHeapSize                              = 8388608                                   {product} {ergonomic}
+    uintx NonNMethodCodeHeapSize                   = 5839372                                {pd product} {ergonomic}
+    uintx NonProfiledCodeHeapSize                  = 122909434                              {pd product} {ergonomic}
+    uintx ProfiledCodeHeapSize                     = 122909434                              {pd product} {ergonomic}
+    uintx ReservedCodeCacheSize                    = 251658240                              {pd product} {ergonomic}
+     bool SegmentedCodeCache                       = true                                      {product} {ergonomic}
+   size_t SoftMaxHeapSize                          = 1073741824                             {manageable} {ergonomic}
+     bool UseCompressedOops                        = true                           {product lp64_product} {ergonomic}
+     bool UseG1GC                                  = true                                      {product} {ergonomic}
+     bool UseLargePagesIndividualAllocation        = false                                  {pd product} {ergonomic}
+
+Logging:
+Log output configuration:
+ #0: stdout all=warning uptime,level,tags foldmultilines=false
+ #1: stderr all=off uptime,level,tags foldmultilines=false
+
+Environment Variables:
+JAVA_HOME=C:\Program Files\Java\jdk-21
+PATH=c:\Users\student\AppData\Local\Programs\Python\Python313;c:\Users\student\AppData\Roaming\Python\Python313\Scripts;C:\Program Files\Java\jdk-21\bin;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\NVIDIA Corporation\NVIDIA NGX;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\dotnet\;C:\Program Files\Git\cmd;C:\Users\student\AppData\Local\Programs\Python\Python313\Scripts\;C:\Users\student\AppData\Local\Programs\Python\Python313\;C:\Users\student\AppData\Local\Programs\Python\Launcher\;C:\Users\student\AppData\Local\Microsoft\WindowsApps;C:\Users\student\AppData\Local\Programs\Microsoft VS Code\bin;C:\Program Files\MySQL\MySQL Server 8.0\bin;C:\Users\student\AppData\Local\GitHubDesktop\bin;;C:\Program Files\Java\jdk-21\bin;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\NVIDIA Corporation\NVIDIA NGX;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\dotnet\;C:\Program Files\Git\cmd;C:\Users\student\AppData\Local\Programs\Python\Python313\Scripts\;C:\Users\student\AppData\Local\Programs\Python\Python313\;C:\Users\student\AppData\Local\Programs\Python\Launcher\;C:\Users\student\AppData\Local\Microsoft\WindowsApps;C:\Users\student\AppData\Local\Programs\Microsoft VS Code\bin;C:\Program Files\MySQL\MySQL Server 8.0\bin;C:\Users\student\AppData\Local\GitHubDesktop\bin;
+USERNAME=student
+TERM=xterm-color
+OS=Windows_NT
+PROCESSOR_IDENTIFIER=Intel64 Family 6 Model 94 Stepping 3, GenuineIntel
+TMP=C:\Users\student\AppData\Local\Temp
+TEMP=C:\Users\student\AppData\Local\Temp
+
+
+
+
+Periodic native trim disabled
+
+---------------  S Y S T E M  ---------------
+
+OS:
+ Windows 11 , 64 bit Build 22621 (10.0.22621.5415)
+OS uptime: 0 days 6:22 hours
+
+CPU: total 8 (initial active 8) (4 cores per cpu, 2 threads per core) family 6 model 94 stepping 3 microcode 0xd6, cx8, cmov, fxsr, ht, mmx, 3dnowpref, sse, sse2, sse3, ssse3, sse4.1, sse4.2, popcnt, lzcnt, tsc, tscinvbit, avx, avx2, aes, erms, clmul, bmi1, bmi2, rtm, adx, fma, vzeroupper, clflush, clflushopt, rdtscp, f16c
+Processor Information for all 8 processors :
+  Max Mhz: 3401, Current Mhz: 3401, Mhz Limit: 3401
+
+Memory: 4k page, system-wide physical 8129M (389M free)
+TotalPageFile size 32705M (AvailPageFile size 102M)
+current process WorkingSet (physical memory assigned to process): 193M, peak: 193M
+current process commit charge ("private bytes"): 680M, peak: 808M
+
+vm_info: Java HotSpot(TM) 64-Bit Server VM (21.0.8+12-LTS-250) for windows-amd64 JRE (21.0.8+12-LTS-250), built on 2025-06-27T08:11:22Z by "mach5one" with MS VC++ 17.6 (VS2022)
+
+END.
